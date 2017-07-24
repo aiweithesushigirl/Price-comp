@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <title>PriceComp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link href="{{url_for('static', filename='style.css')}}" rel="stylesheet" media="screen">-->
+    <style>
+      .container {
+        max-width: 1000px;
+      }
+    </style
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="jumbotron text-center">
+      <h1>Price Comparison</h1>
+      </div>
+        
+        
+       
+      <form role="form" method='POST' action='/search'>
+        <div class="input-group-lg">
+        <div class="form-group">
+          <input type="text" name="search key" class="form-control" id="url-box" placeholder="Enter the product you want to search for..." style="max-width: 300px;" autofocus required>
+        <div class="input-group-button">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+      </div>
+      </div>
+      </form>
+      <br>
+      {% for error in errors %}
+        <h4>{{ error }}</h4>
+      {% endfor %}
+    </div>
+    <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </body>
+</html>
